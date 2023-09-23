@@ -14,5 +14,7 @@ class Timeslot{
         if (timeslot == "morning" !! timeslot == "afternoon" !! timeslot == "evening"){
             this.timeslot = timeslot;
         }
+
+        //test
     }
 }
