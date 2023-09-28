@@ -13,6 +13,41 @@ public enum Timeslot{
         return time;
     }
 
+    public int compareTime(Timeslot timeslot){
+
+        String[] thisTime= this.time.split(":"); 
+        String thisamOrpm=thisTime[1].substring(2, thisTime[1].length());
+        thisTime[1] = thisTime[1].substring(0, thisTime[1].length() - 2);
+        Integer thisH= Integer.valueOf(thisTime[0]); //converting string object to Integer Object (cannot convert string directly to int)
+        int thisHour=thisH.intValue();
+        Integer thisM= Integer.valueOf(thisTime[1]); //converting string object to Integer Object (cannot convert string directly to int)
+        int thisMinute=thisM.intValue();
+        if(thisamOrpm.equals("pm")) thisHour+=12;
+
+
+
+
+        String[] otherTime= timeslot.time.split(":"); 
+        String otheramOrpm=otherTime[1].substring(2, otherTime[1].length());
+        otherTime[1] = otherTime[1].substring(0, otherTime[1].length() - 2);
+        Integer otherH= Integer.valueOf(otherTime[0]); //converting string object to Integer Object (cannot convert string directly to int)
+        int otherHour=otherH.intValue();
+        Integer otherM= Integer.valueOf(otherTime[1]); //converting string object to Integer Object (cannot convert string directly to int)
+        int otherMinute=otherM.intValue();
+        if(otheramOrpm.equals("pm")) otherHour+=12;
+
+
+
+        if(thisHour>otherHour) return 1;
+        else if(otherHour>thisHour) return -1;
+        else{
+            if(thisMinute>otherMinute) return 1;
+            else if(otherMinute>thisMinute) return -1;
+            else return 0;
+        }
+    }
+
+
     public String getEndTime(int duration){
        String[] s= time.split(":"); //rename this variable
 
