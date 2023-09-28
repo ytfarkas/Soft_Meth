@@ -28,6 +28,18 @@ public class Event implements Comparable<Event> {
     }
 
 
+    @Override
+    public int compareTo(Event event){
+        if(this.date.compareTo(event.date)==1) return 1;
+        else if(this.date.compareTo(event.date)==-1) return -1;
+        else{
+            if(this.startTime.compareTime(event.startTime)==1) return 1;
+            else if(this.startTime.compareTime(event.startTime)==-1) return -1;
+            else return 0;
+        }
+    }
+
+
 
 
     Event(Date date, Timeslot startTime, Location location, Contact contact, int duration){
