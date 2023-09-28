@@ -2,6 +2,15 @@ public class Contact {
     private Department department;
     private String email;
     public boolean isValid(){  //complete this 
+        if (this.email == null){
+            return false;
+        }
+        if (this.email.contains("@rutgers.edu")){
+            return true;
+        }
+        else {
+            return false;
+        }
 
     }
 
