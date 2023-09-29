@@ -5,6 +5,8 @@ public class Date implements Comparable<Date> { // add comparable method
     public static final int QUADRENNIAL = 4;
     public static final int CENTENNIAL = 100;
     public static final int QUATERCENTENNIAL = 400;
+
+    
     public boolean isValid() { // check if the date is a valid calendar date
         if (this.year > 1900) {
             switch (this.month) {
