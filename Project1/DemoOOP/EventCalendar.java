@@ -1,7 +1,6 @@
 public class EventCalendar {
     private Event [] events; //the array holding the list of events
     private int numEvents; //current number of events in the array
-
     private int size; // size of the array
 
     public EventCalendar(int size){
@@ -51,6 +50,7 @@ public class EventCalendar {
         this.events = removeEvent;
         this.numEvents--;
      }
+
 
     public boolean contains(Event event) { 
         boolean eventInArray=false;
@@ -159,5 +159,7 @@ public class EventCalendar {
             System.out.println(sortedEvents[i].toString());
         }
      } //ordered by department
+
+
 
     }
