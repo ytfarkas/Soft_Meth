@@ -2,16 +2,26 @@ public class Contact {
     private Department department;
     private String email;
     public boolean isValid(){  //complete this 
+
         if (this.email == null){
             return false;
         }
-        if (this.email.contains("@rutgers.edu")){
-            return true;
+        char at='@';
+        int amountOfAts=0;
+        for(int i=0;i<email.length();i++){
+            if(email.charAt(i)==at){
+                if(i==0 || i==email.length()-1){
+                    return false;
+                }
+                amountOfAts++;
+            }
         }
-        else {
-            return false;
+        if(amountOfAts>1 || amountOfAts==0) return false;
+        else{
+            String[] emailSplit= email.split("@");
+            if(!emailSplit[1].equals("rutgers.edu")) return false;
         }
-
+        return true;
     }
     //test
 
