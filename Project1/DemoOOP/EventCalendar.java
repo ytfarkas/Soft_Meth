@@ -14,7 +14,6 @@ public class EventCalendar {
     for (int i = 0; i < numEvents; i++){
         if (events[i] == event){
             return i;
-            break;
         }
     }
     } 
