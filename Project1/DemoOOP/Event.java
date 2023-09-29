@@ -49,4 +49,23 @@ public class Event implements Comparable<Event> {
         this.contact=contact;
         this.duration=duration;
     }
+    
+
+    public Contact getContact(){
+        return this.contact;
     }
+    public Date getDate(){
+        return this.date;
+    }
+    public Timeslot getTimeslot(){
+        return this.startTime;
+    }
+    public Location getLocation(){
+        return this.location;
+    }
+    public int getDuration(){
+        return this.duration;
+    }
+
+}
+
