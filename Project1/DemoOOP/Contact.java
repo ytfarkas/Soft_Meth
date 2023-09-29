@@ -1,8 +1,19 @@
+/**
+Contact object holding a department and email value featuring methods to validate the object and to get the instance variables
+Then, additional lines of description to elaborate the details if necessary.
+@author David Rahabi, Judah Farkas
+*/
 public class Contact {
     private Department department;
     private String email;
-    public boolean isValid(){  //complete this 
 
+    /**
+    Check if the contact object is valid by checking if the email is in the correct format and if the department value is correct
+    Does nothing if the student is not in the list.
+    @param student the student to be removed.
+    @return true if the student was successfully removed, false otherwise.
+    */
+    public boolean isValid(){  //complete this 
         if (this.email == null){
             return false;
         }
@@ -21,7 +32,8 @@ public class Contact {
             String[] emailSplit= email.split("@");
             if(!emailSplit[1].equals("rutgers.edu")) return false;
         }
-        return true;
+
+        return this.department.isValid();
     }
     //test
 
