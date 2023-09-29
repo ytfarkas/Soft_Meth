@@ -17,6 +17,14 @@ public String getDepartmentName(){
      return this.DEPARTMENTNAME;
 }
 
+public boolean isValid(){
+     for(Department department : Department.values()){
+          if(department.DEPARTMENTNAME.equals(this.DEPARTMENTNAME)) return true;
+     }
+     return false;
+
+}
+
     /**
      * Locations:
      * HLL114, Hill Center, Busch
