@@ -124,4 +124,4 @@ public enum Timeslot{
         return hours+":"+minutes+amOrpm;
     }
 }
-}
+
