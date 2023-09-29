@@ -12,12 +12,6 @@ Department(String department){
      this.DEPARTMENTNAME=department;
 }
 
-public boolean isValid(){
-     for(Department department : values()){
-          
-     }
-
-}
 
 public String getDepartmentName(){
      return this.DEPARTMENTNAME;
