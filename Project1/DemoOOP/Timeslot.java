@@ -13,6 +13,8 @@ public enum Timeslot{
         return time;
     }
 
+   
+
     public int compareTime(Timeslot timeslot){
 
         String[] thisTime= this.time.split(":"); 

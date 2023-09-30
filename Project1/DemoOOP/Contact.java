@@ -8,6 +8,7 @@ public class Contact {
     private String email;
 
     /**
+     * EDIT
     Check if the contact object is valid by checking if the email is in the correct format and if the department value is correct
     Does nothing if the student is not in the list.
     @param student the student to be removed.
@@ -35,7 +36,7 @@ public class Contact {
 
         return this.department.isValid();
     }
-    //test
+    
 
     Contact(Department department, String email){
         this.department=department;
