@@ -3,8 +3,8 @@ public class EventCalendar {
     private int numEvents; //current number of events in the array
     private int size; // size of the array
 
-    public EventCalendar(int size){
-        this.size = size;
+    public EventCalendar(){
+        this.size = 4;
         this.events = new Event[size];
         this.numEvents = 0;
 
@@ -12,10 +12,12 @@ public class EventCalendar {
 
     private int find(Event event) {//search an event in the list
     for (int i = 0; i < numEvents; i++){
-        if (events[i] == event){
+        if (events[i].equals(event)){
             return i;
         }
-    }
+        
+        }
+        return -1;
     } 
     private void grow() { //increase the capacity by 4
         this.size = size + 4;
@@ -35,6 +37,7 @@ public class EventCalendar {
         }
         events[numEvents] = event;
         numEvents++;
+        return true;
     }
 
 
@@ -48,6 +51,7 @@ public class EventCalendar {
         }
         this.events = removeEvent;
         this.numEvents--;
+        return true;
      }
 
 
